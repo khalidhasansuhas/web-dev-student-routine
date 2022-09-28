@@ -1,12 +1,13 @@
 import React from 'react';
 import Info from '../Info/Info';
+import Routine from '../Routine/Routine';
 import './Main.css'
 
 const Main = () => {
     return (
         <div className='main-container'>
             <div className="routine-container">
-                <h1>routine container</h1>
+                <Routine></Routine>
             </div>
             <div className="info-container">
                 <Info></Info>
