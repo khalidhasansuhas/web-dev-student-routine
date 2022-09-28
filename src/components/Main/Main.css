@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    
+}
+
+
+.routine-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 45px;
+    margin: 50px 50px;
+}
+.info-container{
+    background-color: rgb(162, 167, 167);
+}
+
+@media screen and (max-width: 576px ){
+
+    .main-container {
+        display: flex;
+        flex-direction:column-reverse;
+    }
+        
+}
+
+@media screen and  (min-width:577px) and (max-width: 1100px){
+
+    .main-container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+    
+        
+}

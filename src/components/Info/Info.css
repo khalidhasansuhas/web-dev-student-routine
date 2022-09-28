@@ -1,0 +1,102 @@
+.info-container{
+    height: 100vh;
+    margin: auto;
+}
+.info h1{
+    text-align: center;
+    color: brown;
+   padding: 20px;
+    
+}
+
+.student{
+    display: flex;
+}
+.student >div {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+
+}
+.student img{
+    width: 20%;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.student-info{
+ display: flex;
+ justify-content: space-between;
+ padding: 10px;
+ margin: 10px;
+ border-radius: 5px;
+ background-color: rgb(230, 226, 222);
+}
+
+.break-container{
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+.break-container h3{
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.break-btn{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(230, 226, 222);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    
+}
+.break-btn > button{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+
+    color:white;
+    background-color: rgb(7, 7, 149);
+}
+.break-btn > button:hover{
+    cursor: pointer;
+    background-color: purple;
+}
+
+.practice-container{
+    padding-bottom: 20px;
+}
+.practice-container h3{
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.practice-container h5{
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(230, 226, 222);
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.complete-btn{
+    width: 92%;
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+    border: none;
+    border-radius: 5px;
+    color:white;
+    background-color: blue;
+}
+
+.complete-btn:hover{
+    background-color: purple;
+    cursor: pointer;
+}
