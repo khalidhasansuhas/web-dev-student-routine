@@ -2,7 +2,8 @@ import React from 'react';
 import './Routine.css';
 
 const Routine = (props) => {
-    const { id, subject, image, description, time } = props.routine;
+    const {handleAddToList,routine}= props;
+    const { subject, image, description, time } = routine;
     return (
         <div className='routine'>
             <img src={image} alt="" />
@@ -11,7 +12,7 @@ const Routine = (props) => {
                 <p><strong>Description</strong>  : <small>{description}</small></p>
                 <p><strong>Practice Time: {time}</strong> <small>minutes</small></p>
             </div>
-            <button className='btn-add'> Add to List</button>
+            <button onClick={()=> handleAddToList(routine)} className='btn-add'> Add to List</button>
 
         </div>
     );

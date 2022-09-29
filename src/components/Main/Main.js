@@ -15,6 +15,10 @@ const Main = () => {
         
     },[])
 
+    const handleAddToList = (routine)=> {
+        console.log(routine);
+    }
+
     return (
         <div className='main-container'>
             <div className="routine-container">
@@ -22,6 +26,7 @@ const Main = () => {
                     routines.map(routine =><Routine 
                     key={routine.id}
                     routine={routine}
+                    handleAddToList={handleAddToList}
                     ></Routine> )
                 }
                 
