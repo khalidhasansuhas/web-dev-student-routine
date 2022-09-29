@@ -6,7 +6,8 @@ import './Main.css'
 
 const Main = () => {
 
-    const [routines,setRoutines] = useState([])
+    const [routines,setRoutines] = useState([]);
+    const [info, setInfo] = useState([]);
 
     useEffect(()=>{
         fetch('routine.json')
@@ -16,7 +17,8 @@ const Main = () => {
     },[])
 
     const handleAddToList = (routine)=> {
-        console.log(routine);
+        const newInfo = [...info, routine];
+        setInfo(newInfo);
     }
 
     return (
@@ -32,7 +34,7 @@ const Main = () => {
                 
             </div>
             <div className="info-container">
-                <Info></Info>
+                <Info info={info}></Info>
             </div>
         </div>
     );

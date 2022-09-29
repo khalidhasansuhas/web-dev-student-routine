@@ -3,7 +3,15 @@ import profile from '../../image/Profile.png';
 
 import './Info.css'
 
-const Info = () => {
+const Info = (props) => {
+
+    const {info} =props;
+    // console.log(info);
+
+    let total = 0;
+    for(const routine of info ){
+        total = total + routine.time;
+    }
     return (
         <div className='info-container'>
             <div className='info'>
@@ -44,7 +52,7 @@ const Info = () => {
             </div>
             <div className="practice-container">
                 <h3>Practice Details </h3>
-                <h5>Practice Time: <span>{}</span> </h5>
+                <h5>Practice Time: <span>{total}</span> </h5>
                 <br />
                 <h5>Break Time: <span>{}</span> </h5>
                 
