@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import profile from '../../image/Profile.png';
 
 import './Info.css'
+import Swal from 'sweetalert2';
+
 
 const Info = (props) => {
     const [brTime, setBrTime] = useState('');
@@ -25,6 +27,14 @@ const Info = (props) => {
     let total = 0;
     for(const routine of info ){
         total = total + routine.time;
+    }
+
+    const handleCompleteBtn = () => {
+        Swal.fire(
+            'Good job!',
+            'You Have Completed Your Daily Programming Practice!',
+            'success'
+        )
     }
 
     return (
@@ -72,10 +82,12 @@ const Info = (props) => {
                 <h5>Break Time: <span>{brTime}</span> </h5>
                 
             </div>
-            <button className='complete-btn'> Lesson Completed</button>
+            <button onClick={handleCompleteBtn} className='complete-btn'> Lesson Completed</button>
             
         </div>
     );
 };
 
 export default Info;
+
+
