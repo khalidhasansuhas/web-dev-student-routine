@@ -6,21 +6,31 @@ import Swal from 'sweetalert2';
 
 
 const Info = (props) => {
-    const [brTime, setBrTime] = useState('');
+    const [brTime , setBrTime] = useState('')
 
     useEffect(()=>{
-        const storedBrTime = handleBrTime();
-        const savedBrTime = JSON.stringify(storedBrTime);
-        setBrTime(storedBrTime);
-        console.log(savedBrTime);
-    },[])
+        const newTime = getBrTime()
+        setBrTime(newTime)
+    },[brTime])
 
-    const handleBrTime = (e) =>{
-        localStorage.setItem('break-time', e);
+    const handleBrTime =(e)=>{
+        let storedTime = localStorage.getItem('break-time');
+        if (!storedTime){
+            localStorage.setItem('break-time',JSON.stringify(e))
+        }
+        else{
+            localStorage.setItem('break-time',JSON.stringify(e))
+        }
     }
 
-    const getStoredBrTime = () => {
-        const storedTime = localStorage.getItem('break-time');
+    const getBrTime = ()=>{
+        const newBrTime = localStorage.getItem('break-time');
+        const newBr = JSON.parse(newBrTime);
+        if(!newBrTime){
+            return "0";
+        }
+        return newBr;
+
     }
 
     const {info} =props;
