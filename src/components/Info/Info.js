@@ -1,17 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import profile from '../../image/Profile.png';
 
 import './Info.css'
 
 const Info = (props) => {
+    const [brTime, setBrTime] = useState('');
+
+    useEffect(()=>{
+        const storedBrTime = handleBrTime();
+        const savedBrTime = JSON.stringify(storedBrTime);
+        setBrTime(storedBrTime);
+        console.log(savedBrTime);
+    },[])
+
+    const handleBrTime = (e) =>{
+        localStorage.setItem('break-time', e);
+    }
+
+    const getStoredBrTime = () => {
+        const storedTime = localStorage.getItem('break-time');
+    }
 
     const {info} =props;
-    // console.log(info);
-
     let total = 0;
     for(const routine of info ){
         total = total + routine.time;
     }
+
     return (
         <div className='info-container'>
             <div className='info'>
@@ -42,11 +57,11 @@ const Info = (props) => {
             <div className="break-container">
                 <h3>Add a Break</h3>
                 <div className='break-btn'>
-                    <button>5</button>
-                    <button>10</button>
-                    <button>15</button>
-                    <button>20</button>
-                    <button>30</button>
+                    <button onClick={()=>handleBrTime(5)}>5</button>
+                    <button onClick={()=>handleBrTime(10)}>10</button>
+                    <button onClick={()=>handleBrTime(15)}>15</button>
+                    <button onClick={()=>handleBrTime(20)}>20</button>
+                    <button onClick={()=>handleBrTime(30)}>30</button>
 
                 </div>
             </div>
@@ -54,7 +69,7 @@ const Info = (props) => {
                 <h3>Practice Details </h3>
                 <h5>Practice Time: <span>{total}</span> </h5>
                 <br />
-                <h5>Break Time: <span>{}</span> </h5>
+                <h5>Break Time: <span>{brTime}</span> </h5>
                 
             </div>
             <button className='complete-btn'> Lesson Completed</button>

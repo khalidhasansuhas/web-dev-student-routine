@@ -1,0 +1,17 @@
+.faq-container{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+    border: 1px solid purple;
+    border-radius: 10px;
+}
+.faq-container h1{
+    text-align: center;
+    padding: 20px;
+}
+
+.qus-container{
+    padding: 10px;
+    padding-left: 20px;
+}
