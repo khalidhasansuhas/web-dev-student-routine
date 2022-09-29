@@ -1,0 +1,22 @@
+
+.routine {
+    width: 300px;
+    height: 400px;
+    border: 1px solid rgb(61, 58, 58);
+    border-radius: 8px;
+}
+.routine >img {
+    width: 286px;
+    height: 150px;
+    border-radius: 8px;
+    margin: 7px;
+}
+
+.practice-topic{
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.routine-info >p{
+    padding: 10px;
+}
