@@ -47,8 +47,10 @@ const Info = () => {
                 <h5>Practice Time: <span>{}</span> </h5>
                 <br />
                 <h5>Break Time: <span>{}</span> </h5>
+                
             </div>
             <button className='complete-btn'> Lesson Completed</button>
+            
         </div>
     );
 };

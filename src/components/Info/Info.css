@@ -1,6 +1,6 @@
 .info-container{
     height: 100vh;
-    position: sticky;
+    /* position: sticky; */
 
 }
 .info h1{
@@ -101,3 +101,10 @@
     background-color: purple;
     cursor: pointer;
 }
+@media screen and (max-width: 576px){
+
+.info-container{
+    position: relative;
+}
+        
+    }
